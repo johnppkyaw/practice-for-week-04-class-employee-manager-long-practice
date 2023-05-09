@@ -1,5 +1,5 @@
 class Employee {
-  constructor(name, title, salary, manager) {
+  constructor(name, salary, title, manager) {
     this.name = name;
     this.title = title;
     this.salary = salary;
@@ -11,7 +11,10 @@ class Employee {
       //We want to add the whole instance by passing it into that method.
       manager.addEmployee(this);
     }
+  }
 
+  calculateBonus(multiplier) {
+    return this.salary * multiplier;
   }
 }
 
